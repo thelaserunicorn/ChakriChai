@@ -1,3 +1,23 @@
+# ChakriChai  
+
+**ChakriChai** is a web-based platform designed to streamline job searching, application tracking, and recruitment processes. It bridges the gap between job seekers and employers by providing a user-friendly interface and powerful tools for discovering opportunities and managing hiring workflows.
+
+---
+
+## 🚀 Features  
+  
+- **Profile Creation**: Build a professional profile to showcase your skills, experience, and achievements.  
+- **Job Search**: Filter job opportunities by preferences.  
+- **Job Posting**: Easily post job vacancies with detailed descriptions and requirements.  
+
+
+### General Features:  
+- **Secure Authentication**: User accounts with secure login and privacy protection.  
+- **Responsive Design**: Optimized for both desktop and mobile devices.  
+
+---
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
