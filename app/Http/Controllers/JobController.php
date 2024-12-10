@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use App\Models\Job;
 use Illuminate\Support\Facades\Storage;
+
 
 class JobController extends Controller
 {
@@ -15,7 +17,7 @@ class JobController extends Controller
      */
     public function index(): View
     {
-        $jobs = Job::all();
+        $jobs = Job::paginate(3);
         return view('jobs.index')->with('jobs', $jobs);
     }
 
@@ -54,7 +56,7 @@ class JobController extends Controller
         ]);
 
         // Hardcoded user ID
-        $validatedData['user_id'] = 1;
+        $validatedData['user_id'] = auth()->user()->id;
 
         // Check for image
         if ($request->hasFile('company_logo')) {
@@ -142,6 +144,11 @@ class JobController extends Controller
         }
 
         $job->delete();
+
+        if (request()->query('from') == 'dashboard') {
+            return redirect()->route('dashboard')->with('success', 'Job listing deleted successfully!');
+        }
+
 
         return redirect()->route('jobs.index')->with('success', 'Job listing deleted successfully!');
     }
