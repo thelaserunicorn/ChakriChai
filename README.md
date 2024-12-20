@@ -2,6 +2,7 @@
 
 **ChakriChai** is a web-based platform designed to streamline job searching, application tracking, and recruitment processes. It bridges the gap between job seekers and employers by providing a user-friendly interface and powerful tools for discovering opportunities and managing hiring workflows.
 
+![image](image.png)
 ---
 
 ## 🚀 Features  
